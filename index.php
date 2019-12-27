@@ -1,3 +1,4 @@
+<?php require_once 'inc/functions.php'; ?>
 <html lang="en">
 <head>
     <title>payment_provider_app</title>
@@ -112,26 +113,27 @@
                 <form id="buy" method="post">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="name" class="form-control" id="name" placeholder="Enter name">
+                        <input type="name" name="name" required class="form-control" id="name" placeholder="Enter name">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        <input type="email" name="email" required class="form-control" id="email" placeholder="Enter email">
                     </div>
                     <div class="form-group">
                         <label for="product">Product</label>
-                        <input type="text" class="form-control" id="product" readonly>
+                        <input type="text" name="product" required class="form-control" id="product" readonly>
                     </div>
                     <div class="form-group">
                         <label for="price">Price</label>
-                        <input type="text" class="form-control" id="price" readonly>
+                        <input type="text" name="price" required class="form-control" id="price" readonly>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Buy</button>
                     </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Buy</button>
-            </div>
+
         </div>
     </div>
 </div>
